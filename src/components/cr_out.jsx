@@ -3,7 +3,7 @@ export default function cr_out() {
   return (
     <div>
       <video width="400" autoPlay loop muted>
-        <source src="cr_out.mp4" type="video/mp4" />
+        <source src="Cr_out.mp4" type="video/mp4" />
       </video>
     </div>
   )
