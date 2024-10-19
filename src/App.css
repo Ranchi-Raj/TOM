@@ -1,0 +1,39 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 20px;
+}
+
+.middle{
+  display: flex;
+  align-items: center;
+}
+
+input{
+  width: 30%;
+  padding: 10px;
+  margin : 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+label{
+  margin: 10px;
+}
+
+button{
+  background-color: rgb(44, 162, 209);
+}
