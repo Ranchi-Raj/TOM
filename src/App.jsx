@@ -14,7 +14,7 @@ function App() {
       
       </div> */}
       
-      <div className='positioner'><FourBar/> </div> : <Slider/>
+      <div className='positioner'><FourBar/> </div>
 
       
       {/* <Still /> */}

@@ -80,22 +80,22 @@ function FourBar() {
             console.log("Invalid Input")
           ) : (
             <div className="head">
-              {(linkFD > linkFA && linkFD > linkFB && linkFD > linkFC) ? (
+              {(linkFD < linkFA && linkFD < linkFB && linkFD < linkFC) ? (
                 <>
                   <p>DOUBLE CRANK</p>
                   <Dc />
                 </>
-              ) : (linkFA > linkFB && linkFA > linkFC && linkFA > linkFD) ? (
+              ) : (linkFA < linkFB && linkFA < linkFC && linkFA < linkFD) ? (
                 <>
                   <p>Double Rocker</p>
                   <Dr />
                 </>
-              ) : (linkFB > linkFA && linkFB > linkFC && linkFB > linkFD) ? (
+              ) : (linkFB < linkFA && linkFB < linkFC && linkFB < linkFD) ? (
                 <>
                   <p>Crank Rocker</p>
                   <Cr_inp />
                 </>
-              ) : (linkFC > linkFA && linkFC > linkFB && linkFC > linkFD) ? (
+              ) : (linkFC < linkFA && linkFC < linkFB && linkFC < linkFD) ? (
                 <>
                   <p>Crank Rocker</p>
                   <Cr_out />
