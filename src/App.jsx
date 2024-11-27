@@ -1,7 +1,8 @@
 import './App.css'
 import FourBar from './FourBar'
-import React from 'react'
-import Slider from './Slider'
+// import React from 'react'
+// import Slider from './Slider'
+import FourBar2 from './FourBar2'
 function App() {
     // const [mech, setMech] = React.useState(0)
 

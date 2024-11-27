@@ -28,6 +28,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: url("./assets/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight :630
 }
 
 h1 {

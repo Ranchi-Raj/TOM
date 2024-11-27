@@ -5,6 +5,7 @@ import Dr from './components/dR';
 import Cr_out from './components/cr_out';
 import Cr_inp from './components/cr_inp';
 import Still from './components/still_image';
+import Non_grash from './components/non_grash';
 import toast, { Toaster } from 'react-hot-toast';
 
 function FourBar() {
@@ -54,7 +55,7 @@ function FourBar() {
       <Toaster /> {/* Place Toaster here so it's part of the component tree */}
       <h1>4 BAR MECHANISM</h1>
       <div className="top">
-        <label>Follower Link</label>
+        <label>Follower Link :</label>
         <input
           value={linkA}
           className=""
@@ -64,7 +65,7 @@ function FourBar() {
         />
       </div>
       <div className="middle">
-        <label>Input Link</label>
+        <label>Input Link :</label>
         <input
           value={linkB}
           className=""
@@ -72,14 +73,28 @@ function FourBar() {
           required
           placeholder="Link B"
         />
-        {linkFA && linkFB && linkFC && linkFD && (
+        {
+          linkFA && linkFB && linkFC && linkFD && (
           (linkFA + linkFB + linkFC <= linkFD ||
           linkFA + linkFB + linkFD <= linkFC ||
           linkFA + linkFC + linkFD <= linkFB ||
           linkFB + linkFC + linkFD <= linkFA) ? (
             console.log("Invalid Input")
-          ) : (
+          ) : 
+          
+          (
+            Math.min(linkFA, linkFB, linkFC, linkFD) + Math.max(linkFA, linkFB, linkFC, linkFD) > (linkFA + linkFB + linkFC + linkFD - Math.max(linkFA, linkFB, linkFC, linkFD) - Math.min(linkFA, linkFB, linkFC, linkFD))
+          )  ? 
+          <div className='head'>
+          <p>Non Grash OF</p>
+            <Non_grash/>
+          </div>
+
+          :
+          
+          (
             <div className="head">
+              <p> Grash OF </p>
               {(linkFD < linkFA && linkFD < linkFB && linkFD < linkFC) ? (
                 <>
                   <p>DOUBLE CRANK</p>
@@ -100,12 +115,13 @@ function FourBar() {
                   <p>Crank Rocker</p>
                   <Cr_out />
                 </>
-              ) : null}
+              ) : <Still/>
+              }
             </div>
           )
         )}
         {!active && <Still />}
-        <label>Output Link</label>
+        <label>Output Link :</label>
         <input
           className=""
           value={linkC}
@@ -115,7 +131,7 @@ function FourBar() {
         />
       </div>
       <div className="bottom">
-        <label>Ground Link</label>
+        <label>Ground Link :</label>
         <input
           value={linkD}
           onChange={(e) => setLinkD(e.target.value)}
